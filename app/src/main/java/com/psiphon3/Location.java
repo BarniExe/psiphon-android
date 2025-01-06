@@ -36,13 +36,7 @@ import io.reactivex.Single;
 
 public class Location {
     public static boolean isAvailable(Context context) {
-        // check if location permission is granted
-        if (ContextCompat.checkSelfPermission(context,
-                Manifest.permission.ACCESS_COARSE_LOCATION) != PermissionChecker.PERMISSION_GRANTED) {
-            return false;
-        }
-        // check if Google Play services available
-        return GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context) == ConnectionResult.SUCCESS;
+        return true;
     }
 
     public static Single<String> getGeoHashSingle(Context context, int geoHashLength, int timeout) {
